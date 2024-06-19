@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {        
-        Scanner myScanner = new Scanner(System.in);
+        Scanner myScanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Informe seu nome: ");
         String nome = myScanner.nextLine();

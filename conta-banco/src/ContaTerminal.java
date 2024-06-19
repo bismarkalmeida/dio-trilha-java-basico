@@ -2,21 +2,21 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class ContaTerminal {
-    public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+    public static void main(String[] args) throws Exception {        
+        Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("Digito o numero da conta: ");
-        int numero = scanner.nextInt();
+        System.out.println("Informe seu nome: ");
+        String nome = myScanner.nextLine();
 
-        System.out.println("Digite o numero da agencia");
-        String agencia = scanner.nextLine();
+        System.out.println("Seu numero da agencia");
+        String agencia = myScanner.nextLine();
 
-        System.out.println("Digite seu nome");
-        String nome = scanner.nextLine();
+        System.out.println("Informe seu numero de conta: ");
+        int numeroConta = myScanner.nextInt();
+        
+        System.out.println("Informe o saldo da conta: ");
+        double saldo = myScanner.nextDouble();
 
-        System.out.println("Digite o seu saldo");
-        double saldo = scanner.nextDouble();
-
-        System.out.println("Olá " + nome + " obrigado por criar um conta em nosso banco, sua agência " + agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível");
+        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + " conta " + numeroConta + " e seu saldo " + saldo + " já está disponível para saque");
     }
 }

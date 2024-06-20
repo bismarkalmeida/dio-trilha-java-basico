@@ -3,20 +3,21 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {        
-        Scanner myScanner = new Scanner(System.in).useLocale(Locale.US);
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.out.println("Informe seu nome: ");
-        String nome = myScanner.nextLine();
+        System.out.println("\nInforme seu numero de conta: ");
+        int numeroConta = scanner.nextInt();
+        scanner.nextLine(); // Sem esse item o nextLine da agência consome o Line new da conta, provocando comportamento inesperado.
 
         System.out.println("Seu numero da agencia");
-        String agencia = myScanner.nextLine();
+        String agencia = scanner.nextLine();
 
-        System.out.println("Informe seu numero de conta: ");
-        int numeroConta = myScanner.nextInt();
+        System.out.println("Informe seu nome: ");
+        String nome = scanner.nextLine();
         
         System.out.println("Informe o saldo da conta: ");
-        double saldo = myScanner.nextDouble();
+        double saldo = scanner.nextDouble();
 
-        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + " conta " + numeroConta + " e seu saldo " + saldo + " já está disponível para saque");
+        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + " conta " + numeroConta + " e seu saldo " + saldo + " já está disponível para saque\n");
     }
 }
